@@ -51,7 +51,7 @@ class DriverManager:
     @property
     def ftdi_mux(self):
         if self._ftdi_mux is None:
-            self._ftdi_mux = ftdi.open(ftdi_description="Patch Panel Loop Back Jig")
+            self._ftdi_mux = ftdi.open(ftdi_description="J413")
             if self._ftdi_mux is None:
                 raise InstrumentError(
                     "Could not find Jig ftdi chip\n"
